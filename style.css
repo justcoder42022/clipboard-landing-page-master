@@ -1,0 +1,242 @@
+:root {
+  font-size: 10px;
+  --Strong-Cyan: hsl(171, 66%, 44%);
+  --Light-Blue: hsl(233, 100%, 69%);
+  --Dark-Grayish-Blue: hsl(211, 16%, 25%);
+  --Grayish-Blue: hsl(201, 11%, 66%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.logo-section::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  background-image: url("images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+  position: absolute;
+  inset: 0;
+  bottom: 50%;
+}
+
+
+main {
+  padding-bottom: 10rem;
+  background-color: white;
+}
+footer {
+  background-color: hsla(211, 16%, 55%, 0.1);
+}
+img {
+  max-width: 100%;
+  display: block;
+  margin: 6rem auto;
+}
+a {
+  display: block;
+  text-decoration: none;
+  border: none;
+  color: var(--dark-Grayish-Blue);
+  font-weight: 400;
+  font-size: 1.62rem;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--Dark-Grayish-Blue);
+  margin-top: 6rem;
+}
+h1 {
+  font-size: 3rem;
+}
+p {
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+  margin: 2rem 0 5rem 0;
+  font-size: 1.62rem;
+  line-height: 1.5;
+}
+
+section {
+  margin: 10rem 3rem;
+}
+
+.logo-section img {
+  width: 12.5rem;
+  height: 12.5rem;
+  margin: 0 auto;
+}
+.workflow-cards img {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+footer {
+  display: flow-root; /*stop margin collapse*/
+}
+.footer-logo {
+  width: 5.6rem;
+  height: 5.6rem;
+}
+footer a {
+  margin: 3rem 0;
+}
+footer a:hover {
+ color: var(--Strong-Cyan);
+}
+
+footer .social-icon-div img {
+  display: inline;
+  margin-inline: 1.5rem;
+  cursor: pointer;
+}
+footer .social-icon-div img:hover {
+  filter: invert(58%) sepia(70%) saturate(372%) hue-rotate(121deg) brightness(86%) contrast(86%);
+}
+
+.btn-primary-strong {
+  background-color: var(--Strong-Cyan);
+  box-shadow: 0px 5px 20px 1px hsla(171, 66%, 54%, 0.5);
+}
+.btn-primary-light {
+  background-color: var(--Light-Blue);
+}
+.btn {
+  color: white;
+  padding: 1.5rem 0;
+  margin: 2.5rem 0;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+@media (min-width: 620px) {
+  section {
+    margin-inline: auto;
+  }
+  h2 {
+    font-size: 3.4rem;
+  }
+  h3 {
+    font-size: 2.55rem;
+  }
+  p {
+    margin-inline: auto;
+    font-size: 1.8rem;
+    max-width: 60ch;
+  }
+  a {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    display: inline;
+    padding: 1.7rem 3rem;
+    margin-inline: 0.7rem;
+  }
+
+  .logo-section {
+    max-width: 55ch;
+  }
+  .logo-section h1 {
+    font-size: 4rem;
+  }
+
+  .logo-section::before {
+    background-image: url("images/bg-header-desktop.png");
+  }
+  .features-intro {
+    margin-block-end: 0;
+  }
+  .feature-card-body {
+    display: grid;
+    text-align: left;
+    grid-auto-columns: 1fr;
+  }
+  .feature-card-body > img {
+    margin: 0;
+    grid-column: 1/2;
+  }
+  .feature-cards {
+    margin: 0;
+    margin-left: 6rem;
+    grid-column: 2/3;
+    align-self: center;
+  }
+
+  .feature-cards p {
+    max-width: 34ch;
+    margin-block: 1rem;
+    margin-inline: 0;
+  }
+  .feature-cards h3 {
+    margin-block: 3.5rem 0;
+  }
+  .workflow-cards {
+    display: flex;
+    max-width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .card p{
+      max-width: 34ch;
+  }
+  .logos-div{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 4rem;
+  }
+  
+  /*reset padding border on all elements on footer */
+  footer *,
+  footer .social-icon-div img,
+  .footer-nav a{
+      padding: 0;
+      margin-block: 0;
+      margin-inline:0;
+  }
+ /*footer reset end*/
+
+footer{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+  
+}
+.footer-nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    justify-items: left;
+    row-gap: 2rem;
+    column-gap: 10rem;
+     padding-block: 3rem;
+   padding-inline: 2rem;
+  
+}
+.footer-nav > *{
+  min-width: max-content;
+}
+.social-icon-div{
+  display: flex;
+  gap: 2rem;
+}
+footer .social-icon-div img{
+ min-width: min-content;
+}
+}
