@@ -47,7 +47,7 @@ a {
   text-decoration: none;
   border: none;
   color: var(--dark-Grayish-Blue);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.62rem;
 }
 h1,
@@ -118,6 +118,7 @@ footer .social-icon-div img:hover {
   margin: 2.5rem 0;
   border-radius: 10rem;
   cursor: pointer;
+  font-weight: 600;
 }
 
 @media (min-width: 620px) {
